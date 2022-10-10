@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+		<title></title>
+	</head>
+	<body>
+		<div id="app">
+			<input type="button" value="添加数据" @click="add">
+			<input type="button" value="移除数据" @click="remove">
+			<ul>
+				<li v-for="(it,index) in arr">{{index+1}}学习vue好累{{it}}</li>
+				<!-- (it表示数组名字,index给每个数组标号) -->
+			</ul>
+			<h2 v-for="item in motto" v-bind:title="item.name">
+				{{item.name}} 
+			</h2>
+		</div>
+		<script>
+		var app=new Vue({
+			el:"#app",
+			data:{
+				arr:["坚持","努力","拼搏","梦想"],
+				motto:[{name:"爱拼才会赢"},
+				{name:"爱拼才会赢"},
+				]
+			},
+			methods:{
+				add:function(){
+					this.motto.push({name:"爱拼才会赢"})
+				},
+				remove:function(){
+					this.motto.shift();
+				}
+			},
+		})
+		</script>
+	</body>
+</html>

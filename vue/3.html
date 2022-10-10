@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+		<title></title>
+	</head>
+	<body>
+		<div id="app" >
+		{{message}}
+		<h2>{{school.name}} {{school.mobile}}</h2>
+		<ul>
+			<li>{{campus[0]}}</li>
+			<li>{{campus[3]}}</li>
+		</ul>
+		</div>
+				<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+				<script>
+				var app=new Vue({
+				el:"#app",
+				data:{
+					message:"你好 vue！",
+					school:{
+						name:"小菜鸟",
+						mobile:"400-618-9090"
+				},
+				campus:["B站","CSDN","慕课网","快手"]
+				}
+				})
+				</script>
+	</body>
+</html>

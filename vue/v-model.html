@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<script src="vue.js" type="text/javascript" charset="utf-8"></script>
+		<title></title>
+	</head>
+	<body>
+		<div id="app">
+			<input type="button" value="修改message" @click="setM">
+			<input type="text" v-model="message" @keyup.enter="getM">
+			<h2>{{message}}</h2>
+		</div>
+		<script>
+		var app=new Vue({
+			el:"#app",
+			data:{
+				message:"今天你学习了什么？",
+				study:"学习vue"
+			},
+			methods:{
+				getM:function(){
+					alert(this.study);
+				},
+				setM:function(){
+					this.study="没学习";
+				}
+			},
+		})
+		</script>
+	</body>
+</html>

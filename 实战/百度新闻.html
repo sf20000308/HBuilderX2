@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#mydiv{
+				width:100px;
+				height:100px;
+				border:2px solid #00FFFF;
+				border-radius: 50%;
+				position: fixed;
+				right:10px;
+				bottom:10px;
+				line-height: 80px;
+				text-align: center;
+				display: none;
+			}
+			.text{
+				width: 100px;
+				height: 300px;
+				background-color: #FF0000;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="mydiv" onclick="abc">返回顶部</div>
+		<div class="text"></div>
+		<div class="text"></div>
+		<div class="text"></div>
+		<div class="text"></div>
+		<div class="text"></div>
+		<div class="text"></div>
+		<div class="text"></div>
+		<div class="text"></div>
+		<div class="text"></div>
+	</body>
+	<script type="text/javascript">
+		var mydiv=document.getElementById("mydiv");
+			mydiv.onclick = function  abc(){
+				var y=document.documentElement.scrollTop;
+			// 匀速
+			// var mytimer=setInterval(function(){
+			// 	y=y-10;
+			// 	document.documentElement.scrollTop=y;
+			// 	if(y<=0){
+			// 		clearInterval(mytimer);
+			// 	}
+			// },20)
+			//缓冲、减速
+			var mytimer=setInterval(function(){
+				y=y-(document.documentElement.scrollTop/50);
+				document.documentElement.scrollTop=y;
+				if(y<=0){
+					clearInterval(mytimer);
+				}
+			},20)
+		}
+		
+		window.onscroll=function(){
+			if(document.documentElement.scrollTop>300){
+				mydiv.style.display="block"
+			}
+			else
+			{
+				mydiv.style.display="none"
+			}
+		}
+	</script>
+</html>

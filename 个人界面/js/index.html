@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>登录</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				/* background: url(./img/222.jpg); */
+				background-repeat: no-repeat;
+				/* transform: rotateX(45deg) ; */
+			     
+			}
+			
+			 .loginbox{
+				width: 1080px;
+				height: 710px;
+				color: black;
+				
+				position: absolute;
+				/*transform: translate(-50%,50%);*/
+				/* box-sizing: border-box; */
+			} 
+			/* .loginbox p{
+				margin: 0;
+				padding: 0;
+				font-weight: bold;
+			}
+			.loginbox input{
+				width: 100%;
+				margin-bottom: 20px;
+			}
+			.loginbox input[type="text"],input[type="password"]
+			{
+				border: none;
+				border-bottom:1px solid blue;
+				background:transparent ;
+				outline: none;
+				height: 40px;
+				color: black;
+				font-size: 16px;
+			} */
+			
+			.img1{
+					position:absolute;
+					width:1080px;
+				  height: 700px;
+					left:0px;
+					right: 0px;
+					top:0px;
+					z-index:-1;
+					background-color: tomato;
+					opacity:0.4;
+					  filter:alpha(opacity=40);	 
+
+			}
+			.form1{
+				/* margin-top: 300px; */
+				padding-top: 20px;
+				width: 300px;
+				height: 150px;
+				position:absolute;
+				left:450px;
+				top:250px;
+				z-index:1;
+				align:center ;
+				/* background-color: #00FFFF; */
+			}
+			.p1.p2{
+				font-size: 100px;
+			}
+			.denglu1{
+				text-decoration: none;
+				font-size: 20px;
+				
+			}
+			.tiao{
+				font-size: 20px;
+			}
+			.kuangkuang{
+				height: 25px;
+				margin: 5px;
+			}
+			button{
+				margin-left: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="loginbox">
+			<div class="img1">
+				<img src="../img/denglu.jpg" alt="" width="1520" height="700">
+			</div> 
+			<form class="form1" align="center" >
+				<span class="tiao">账号:</span>
+				<input type="text" class="kuangkuang" />
+				<br>
+			<span class="tiao">密码:</span>
+			<input type="password" class="kuangkuang" />
+			<br>
+			<input type="radio">
+			<span class="tiao">记住密码</span>
+			<button type="button" ><a href="拼多多首页.html" class="denglu1">登录</a></button>
+			<div class="tiao">
+				<a href="#">忘记密码？</a>
+				<a href="#">没有注册</a>
+			</div>
+			</form>
+		</div>
+	</body>
+</html>

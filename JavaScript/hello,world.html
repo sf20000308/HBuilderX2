@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!-- <script type="text/javascript">
+			alert('hello,world');
+		</script> -->
+		
+	</head>
+	<body>
+	<!-- <div id="father">
+		<h1>标题一</h1>
+		<p id="p1">p1</p>
+		<p class="p2">p2</p>
+	</div>	 -->
+	<!-- <div id="id1">
+		
+	</div> -->
+	<!-- <p id="js">javascript</p>
+	<div id="list">
+		<p id="se">javaES</p>
+		<p id="ee">javaEE</p>
+		<p id="me">javaME</p>
+	</div> -->
+	<form action="a" method="post" ansumit="aa()">
+		<p>
+		<span>用户名：</span>
+		<input type="text" id="username" name="username">
+		</p>
+		<p>
+			<span>密码</span><input type="password" id="input-password" >
+		</p>
+		<!-- <p>
+			<span>性别</span>
+		<input type="radio" name="sex" value="man">男
+		<input type="radio" name="sex" value="woman">女
+		</p> -->
+		<input type="hidden" id="mds-password" name="password">
+		<button type="submit" onclick="abc()">提交</button>
+	</form>
+	
+	</body>
+</html>
+<script  src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+		'use strict';
+			// var arr =[1,2,3,4,5,'hello'];
+			// new Array(1,12,3,4,4,5);
+			// Person person =new Person(1,2,3,4);
+			
+			// var person={
+			// 	name:"sf",
+			// 	age:3,
+			// 	tags:['js','java','web']
+			// }
+			// console.log('a\'');
+			// console.log("a");
+			// var age=3;
+			// if(age>3){
+			// 	alert("haha");
+			// }else if(age<5){
+			// 	alert("kuwa~");
+			// }else{
+			// 	alert("kuwa");
+			// }
+			// while(age<100){
+			// 	age=age+1;
+			// 	console.log(age)
+			// }
+			// for(let i=0;i<100;i++){
+			// 	console.log(i)
+			// }
+			//  var age =[1,2,4,5,6,7,8,8,8,13,21];
+			// age.forEach(function(value){
+			// 	console.log(value)
+			
+			// })
+			// var now =new Date();
+			// now.getFullYear();
+			// now.getYear();
+			// now.getMonth();
+			// now.getDate();
+			// now.getDay();
+			// now.getMinutes();
+			// now.getSeconds();
+			// console.log(new Date(157810617599))
+			// var student={
+			// 	name:"sf",
+			// 	age:3,
+			// 	run:function(){
+			// 		console.log(this.name+"run...");
+			// 	}
+			// };
+			// //小明的原型是student；
+			// xiaoming._proto_=student;
+			// class Student{
+				
+			// 		constructor(name){
+			// 			this.name=name;
+			// 		}
+			// 		hello(){
+			// 			alert('hello')
+			// 		}
+			// 	}
+				
+			// 定义一个学生的类
+			// var xiaoming =new Student("xiaoming")
+			// class Student{
+			// 	constructor(name){
+			// 		this.name=name;
+			// 	}
+			// hello(){
+			// 	alert('hello')
+			// }	
+			// }
+			// class XiaoStudent extends Student{
+			// 	constructor(name,grade){
+			// 		super(name);
+			// 		this.grade=grade;
+					
+			// 	}
+			// 	myGrade(){
+			// 		alert('我是一名小学生')
+			// 	}
+			// }
+			// var xiaoming =new Student("xiaoming");
+			// var xiaohong=new XiaoStudent("xiaohong",1);
+			// var h1=document.getElementsByTagName('h1');
+			// var p1=document.getElementsByTagName('p1');
+			// var father =document.ElementsByTagName('father');
+			// var childrens =father.children;//获取节点下的所有子节点
+			//father.firstChild
+			//father.LastChild
+			// var js=document.getElementById('js');
+			// var list=document.getElementById('list');
+			// list.appendChild(js);//追加到后面
+			// var input_text=document.getElementById('username');
+			function abc(){
+				
+				var uname=document.getElementById('username');
+				var pwd=document.getElementById('input-password');
+				var md5pwd=document.getElementById("md5-password");
+				md5.value=md5(pwd.value);
+				return true;
+			}
+		</script> 

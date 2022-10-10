@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>mysite</title>
+		<style>
+		*{
+			padding:0；
+			margin：0；
+			}//对页面样式清零
+			#nav{
+				width:300px;//宽度300个像素宽
+				margin: 100px auto;//水平居中
+				font-size:0;//每个超链接边框的距离为零
+		}
+		a{
+			display:inline-block;//（超链接的样式是由它的内容决定的）为了显示高和宽将inline元素转化成block元素
+			width:80px;//宽度80像素
+			height:30px;//高度30像素
+			font-size:14px;//字号14像素
+            text-align:center;//文本对齐方式水平对齐
+			line-height:30px;//垂直方向垂直居中（与高的像素相同）
+			text-decoration:none;//没有下划线
+			border-bottom:1px solid #ccc;//下边框一个像素实线灰色
+		}//超链接的样式
+		a:hover{
+			color:white;//文字的字体颜色为白色
+			backround-color:#ccc;//背景颜色显示为灰色
+			border:1px solid;//所有边框为一个像素实线
+			border-left-color:orange;//左边框为橘色
+			border-top-color:orange;//顶边框为橘色
+			border-right-color:orange;//右边框为橘色
+		}//当鼠标悬停在超链接上的效果
+		#box1{
+			width:200px;
+			height:200px;
+			border:1px solid blue;
+			float:left;
+		}
+		#box2{
+			width:200px;
+			height:200px;
+			border:1px solid red;
+			float:right;
+		}
+		#container{
+			margin:0 auto;
+			width:100px;
+			height:300px;
+			/*background-color:#6cf;*/
+		}
+		#header{
+			height:100px;
+			backgroung-color:#6cf;
+			margin-bottom:5px;
+			
+		}
+		#main{
+			heght:500px;
+			background-clor:#cff;
+			margin-bottom:5px;
+		}
+		#footer{
+			height:60px;
+			backround-color:#6cf;
+		}
+		</style>
+	</head>
+	<body>
+		<div id="nav">
+			<a href="#">链接1</a>
+			<a href="#">链接2</a>
+			<a href="#">链接3</a>
+		</div>
+		<div id="box1">
+			<a href="#">链接4</a>
+			<a href="#">链接5</a>
+		</div>
+		<div id="box2">
+			<a href="#">链接6</a>
+			<a href="#">链接7</a>
+		</div>
+		<div id="container">
+			<div id="header"></div>
+			<div id="main"></div>
+			<div id="footer"></div>
+		</div>
+	</body>
+</html>

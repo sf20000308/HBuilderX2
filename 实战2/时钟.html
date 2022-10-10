@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+		.clock{
+			width: 300px;
+			height: 300px;
+			border-radius: 50%;
+			border: 10px solid darkgray;
+			background-color: lightgray;
+			margin:200px auto;
+			position: relative;
+		}
+		.mark{
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			background-color: darkgray;
+			position: absolute;
+		}
+		.twe{
+			left: 145px;
+			top: 10px;
+		}
+		.thr{
+			right:10px;
+			top:145px;
+		}
+		.six{
+			left: 145px;
+			bottom: 10px;
+		}
+		.nine{
+			left: 10px;
+			top: 145px;
+		}
+		.center{
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			background-color: darkgrey;
+			position: absolute;
+			left: 140px;
+			top: 140px;
+		}
+		.hand{
+			
+			position: absolute;
+			left: 150px;
+			border-radius: 0 50% 50% 0;
+			transform-origin:0;
+		}
+		.hour{
+			width: 100px;
+			height: 10px;
+			background-color: red;
+			top: 145px;
+		}
+		.min{
+			width: 115px;
+			height: 8px;
+			background-color: blue;
+			top: 145px;
+		}
+		.sec{
+			width: 140px;
+			height: 6px;
+			background-color: darkgray;
+			top: 147px;
+		}
+		.weekday{
+			width: 50px;
+			height: 20px;
+			position: absolute;
+			right: 20px;
+			top:140px;
+		}
+		.weekday span{
+			margin:3px;
+			background-color: white;
+		}
+		.time{
+			width: 66px;
+			height: 20px;
+			bottom: 25px;
+			left: 117px;
+			background-color: white;
+			position: absolute;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="clock">
+			<div class="mark twe"></div>
+			<div class="mark thr"></div>
+			<div class="mark six"></div>
+			<div class="mark nine"></div>
+			
+			<div class="hand hour"></div>
+			<div class="hand min"></div>
+			<div class="hand sec"></div>
+			<div class="weekday"><span>05</span><span>00</span></div>
+			<div class="time">23:33:33</div>
+			<div class="center"></div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var hands =document.getElementsByClassName("hand");
+		var weekday=document.getElementsByClassName("weekday")[0];
+		var dayspan =weekday.getElementsByTagName("span")[0];
+		var weekspan =weekday.getElementsByTagName("span")[1]
+		var time =document.getElementsByClassName("time")[0];
+		var clock =function(){
+			var timeNow =new Date()
+			var day =timeNow.getDate();
+			var week=timeNow.getDay();
+			var weeks=["日","一","二","三","三","四","五","六"]
+			dayspan.innerHTML=format(day);
+			weekspan.innerHTML=weeks[week];
+			var h= timeNow.getHours();
+			var m=timeNow.getMinutes();
+			var s=timeNow.getSeconds();
+			time.innerHTML= format(h) +":"+format(m)+":"+ format(s);
+			var sRot=s*6-90;
+			hands[2].style.transform="rotate("+sRot+"deg)";
+			var mRot=m*6+(s/10)-90;
+			hands[1].style.transform="rotate("+mRot+"deg)";
+			var hRot=h*30+(m/2)-90;
+			hands[0].style.transform="rotate("+hRot+"deg)";
+		}
+		clock();
+		setInterval(clock,1000);
+		function format(n){
+			return n>9?n:('0'+n);
+		}
+	</script>
+</html>

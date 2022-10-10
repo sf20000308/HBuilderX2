@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/*在调用函数时，浏览器每次都会传递进两个隐含的参数
+			1.函数的上下文对象this
+			2.封装实参的对象arguments
+			arguments是一个类数组对象，它也可以通过索引来操作数据，也可以获取长度
+			在调用函数时，我们所传递的实参都会在arguments中保存
+			
+			*/
+		   /*Date对象
+		   在js中使用Date对象来表示一个时间
+		   创建一个Date对象
+		   
+		   */
+		 /*var d=new Date();
+		  console.log(d);
+		  //创建一个指定的时间对象
+		  //需要在构造函数中传递一个表示时间的字符串作为参数
+		  //日期的格式 月份/日/年 时：分：秒
+		  var d2=new Date("12/03/2022");
+		  console.log(d2);
+		  var date=d2.getDate();
+		  console.log("date="+date);
+		  /*Math
+		  Math和其他的对象不同，它不是一个构造函数，
+		  它属于一个工具类不用创建对象，它里边封装了数学运算相关的属性和方法
+		  Math.PI表示的圆周率
+		  */
+		  // console.log(Math.PI);
+		  //abs()可以用来计算一个数的绝对值
+		  // console.log(Math.abs(-1));
+		  // //Math.ceil()
+		  // //可以对一个数进行取整，小数位只要有值自动进1
+		  // console.log(Math.ceil(1.4));
+		  // //Math.floor()
+		  // //向下取整，小数部分会被舍掉
+		  // console.log(Math.round(1.99));
+		  // //Math.round()
+		  // //可以对一个数进行四舍五入取整
+		  // console.log(Math.round(1.4));
+		  // //Math.random()
+		  // //可以用来生成一个0-1之间的随机数
+		  // console.log(Math.random());
+		  // Math.pow(x,y)
+		  // //返回x的y次幂
+		  // console.log(Math.pow(12,3));
+		  // Math.sqrt()
+		  //用于对一个数进行开方运算
+		  /*在js中为我们提供了三个包装类，通过这三个包装类可以将基本类型的数据转换为对象
+		  string()
+		  可以将基本数据类型字符串转换为string对象
+		  Number()
+		  可以将基本数据类型的数字转换为number对象
+		  Boolean()可以将基本数据类型的布尔值转换为Boolean对象
+		  
+		  */
+		 //创建一个number类型的对象
+		 // var num=new Number(3);
+		 // var str=new String("hello");
+		 // var bool=new Boolean(true);
+		 // console.log(typeof bool);
+		 // 向num中添加一个属性
+		 // num.hello="abcdfg";
+		 // console.log(num==num2); 
+		 //正则表达式
+		 /*admin@dasd.com
+		 admin@.com  sadsa,com
+		 邮件的规则
+		 1.前边可以是xxxx乱七八糟
+		 2.跟着一个@
+		 3.后边可以是xxxx乱七八糟
+		 4..com获取其他的乱七八糟
+		 正则表达式用于定义一些字符串的规则
+		 计算机可以根据正侧表达式，来检查一个字符串是否符合规则
+		 获取将字符串中符合规则的内容提取出来
+		 创建正则表达式的对象
+		 语法：
+		 var 变量=new RegExp("正侧表达式","匹配模式");
+		 */
+		// var reg=new RegExp("a");
+		// console.log(typeof reg);
+		// console.log(reg.test("sdasd"))
+		
+		
+		
+		
+		/*使用字面量来创建正则表达式
+		语法：var 变量=/正则表达式/匹配模式
+		使用字面量的方式创建更加简单
+		使用构造函数创建更加灵活
+		*/
+	   // var reg=new RegExp("a","i");
+	   //上面表达式可写成如下
+	//    reg=/a/i;
+	//    console.log(reg.test("abc"));
+	//    //创建一个正则表达式，检查一个字符串中是否有a或b
+	//    /*使用|表示或者的意思
+	//    reg=/ab/表示ab都有
+	//    */
+	//   reg=/a|b/;
+	//   console.log(reg.test("bacd"));
+	//   /*
+	//   创建一个正则表达式检查一个字符串是否有字母
+	//   */
+	//  //reg=/a|b|c|d|e|f/;
+	//  reg=/[ab]/
+	//  console.log(reg.test("cdfg"));
+	//  /*
+	//  []里面的内容也是或的关系
+	//  [ab]==a|b
+	//  [a-b]==a到任意的小写字母
+	//  [A-Z]==任意大写字母
+	//  [A-z]==任意字母
+	//  [0-9]==任意数字
+	//  */
+	// reg=/[a-z]/
+	// console.log(reg.test("h"));
+	
+	// reg=/[A-Z]/
+	// reg=/A-z/
+	// //检查一个字符串中是否含有abc或aec
+	// reg=/abc|adc|aec/
+	// console.log(reg.test("abc"));
+	// /*
+	// [^]除了
+	// */
+	//  reg=/[^ab]/;
+	//  reg=/[^0-9]/;
+	//  console.log(reg.test("12a345"));
+	// 	var str="1a2b3c4d5e6f";
+	// 	/*
+	// 	split()
+	// 	-可以将以个字符串分为一个数组
+	// 	方法中可以传递一个正则表达式作为参数，这样方法将会根据正则表达式去拆分字符串
+	// 	*/
+	//    var result =str.split("c");
+	//      var result1 =str.split(/[A-z]/);
+	// 	console.log(result);
+	// 	console.log(result1)
+	// 	/*
+	// 	search()
+	// 	-可以搜索字符串中是否有指定内容
+	// 	-如果搜索到指定内容，则会返回第一次出现的索引，如果没有搜索到返回-1
+	// 	-它可以接受一个正则表达式作为参数，然后会根据正则表达式去检索字符串
+		
+	// 	*/  
+	//    str="hello abc hello abc";
+	//    /*
+	//    搜索字符串中是否含有abc或aec或afc
+	//    */
+	//    result=str.search("abcb");
+	//    console.log(result);
+	//    /*
+	//    match()
+	//    -可以根据正则表达式，从一个字符串中将符合条件的内容提取出来
+	//   -默认情况下我们的match智慧找到第一个符合要求的内容，找到以后就停止检索
+	//   我们可以设置正则表达式为全局匹配模式，这样就会匹配到所有的内容（/[a-z]gi/）
+	//   我们可以设置正则表达式为全局匹配模式，这样就会匹配到所有的内容
+	//    可以为一个正则表达式设置多个匹配模式，且顺序无所谓
+	//    match()会将匹配到的内容封装到一个数组中返回，即使只查询到一个结果
+	//    */
+	//   str="1a2b3c4d5e6f7";
+	//   result=str.match(/[A-z]/gi);
+	//     console.log(result);
+	// 	//console.log(result[2]);
+	// 	/*
+	// 	relace()
+	// 	-可以将字符串中指定内容替换为新的内容
+	// 	参数
+	// 	1.被替换的内容,可以接受一个正则表达式作为参数
+	// 	2.新的内容
+	// 	-默认只会替换第一个
+	// 	*/
+	//    result=str.replace(/[a-z]/gi,"@_@");
+	//    console.log(result);
+	   
+	   
+	   /*
+	   创建一个正则表达式检查一个字符串中是否含有aaa
+	   */
+	  /*
+	  量词
+	  -通过量词可以设置一个内容出现的次数
+	  -量词只对它前边的一个内容起作用
+	  -{n}正好出现n次
+	  -{m.n}出现m-n次
+	  +至少一个，相当于{1,}
+	  *0个或多个，相当于{0,}
+	  * ？0个或1个相当于{0,1}
+	  */
+	  // var reg=/a{3}/;
+	  // //ababab
+	  // reg=/(ab){3}/;
+	  // reg=/ab{1,3}c/;
+	  // console.log(reg.test("aaabc"));
+	   /*
+	  检查一个字符串是否以a开头
+	  ^表示开头
+	  $表示结尾
+	  如果在正则表达式中同时使用^$则要求字符串必须完全符合正则表达式
+	  */
+	 
+	 
+	 
+	 
+	 
+	 /*
+	 \w查找单词字符
+	 \W查找非单词字符
+	 \d查找数字
+	 \D查找非数字字符
+	 \s查找空白字符
+	 \S查找非空白字符
+	 \b匹配单词边界
+	 \B匹配非单词边界
+	 \o查找NUL字符
+	 \n查找换行符
+	 \f查找换页符
+	 \r查找回车符
+	 \t查找制表符
+	 \v查找直制符
+	 \xxx查找以八进制数xxx灰顶的字符
+	 \xdd查找以十六进制数dd规定的字符
+	 \uxxxx查找以十六进制数xxx规定的Unicode字符
+	 电子邮件
+	 hello  .nihao  @abc.com.cn
+	 任意数字下划线，任意数字字母下划线@ 任意字母数字
+	 \w{3,} (\.\w+)* @ [A-z0-9]+  (\.[A-z]{2,5}{1,2})
+	 */
+	// var emailReg= /^\w{3,}(\.\w+)*@[A-z0-9]+(\.[A-z]{2,5}){1,2}$/;
+	// var email="abc@abc.com";
+	// console.log(emailReg.test(email));
+	//
+	// var btn=document.getElementById("btn");
+	// //修改按钮的文字
+	// btn.innerHTML="i'm Button";
+	/*
+	可以为按钮的对应事件绑定处理函数的形式来响应事件
+	这样当事件被触发是，其对应的函数将会被调用
+	*/
+   //绑定一个单击事件
+   //绑定这种为单击事件绑定的函数，我们称为单击响应函数
+   // btn.onclick=function(){
+	  //  alert("你还点");
+   // };
+   
+   
+		</script>
+	</head>
+	<body>
+		<!-- <button id="btn">点我一下</button>
+		<script type="text/javascript">
+			//获取id为btn的按钮
+			var btn =document.getElementById("btn")
+			//为按钮绑定一个单击响应函数
+			btn.onclick=function(){
+				alert("hello");
+				}; 
+		</script>-->
+		<button id="btn">点我一下</button>
+		<script type="text/javascript">
+			/*
+			onload时间会在整个页面加载完成之后才触发
+			为window绑定一个onload事件
+			该事件对应的响应函数将会在页面加载完成之后执行
+			这样可以确保我们的代码执行时所有的DOM对象已经加载完毕了
+			*/
+		   window.onload=function(){
+			  //获取id为btn的按钮
+			  var btn =document.getElementById("btn");
+			  //为按钮绑定一个单击响应函数
+			  btn.onclick=function(){
+			  	alert("hello");
+			  	}; 
+		   };
+		   
+		</script>
+	</body>
+</html>

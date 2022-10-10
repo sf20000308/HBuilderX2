@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<script src="vue.js" type="text/javascript" charset="utf-8"></script>
+		<title></title>
+	</head>
+	<body>
+		<div id="mask">
+			<div class="center">
+				<h2 class="title">
+					<img src="./1.png" >
+					</h2>
+					<img src="./6.png" alt="">
+					<a href="javascript:void(0)" v-show="index!=0" @click="prev" class="left">
+						<img src="./2.png" alt="">
+					</a>
+				<a href="javascript:void(0)" v-show="index<imgArr.length-1"@click="next" class="right">
+					<img src="./3.png" alt="">
+				</a>
+				<script>
+				var app=new Vue({
+					el:"mask",
+					data:{
+						imgArr:["./1.png",
+						"./2.png",
+						"./3.png",
+						"./16.png",
+						],
+						index:0
+					}
+				})
+				</script>
+				
+				
+			</div>
+		</div>
+	</body>
+</html>

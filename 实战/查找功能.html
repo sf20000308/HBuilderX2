@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="" name="" id="myinput" value="" />
+		<button id="mybtn">查找</button>
+		<p id="myp">古巴国际政治研究中心学者
+			奈尔森·罗克：美国一直以来需要通过战争来摆脱其正在经历的危机。目前从政治和经济的角度来看，美国正在经历一场非常严重的危机，它正在向乌克兰出售武器，向其他与俄罗斯为敌的国家出售武器，为美国军工复合体的利益服务，这是其国内生产总值的重要组成部分，同时还转移了人们对其国内一些主要问题的注意力。
+
+			学者表示，美国挑起乌克兰危机的另一个重要目的是借动荡局势遏制俄罗斯，维持自身霸权地位。
+
+			古巴国际政治研究中心学者
+			奈尔森·罗克：美国一直在整个欧洲拥有霸权，并试图让越来越多的国家加入北约，目的是加强联盟，在俄罗斯边境附近增加武器部署。他们试图通过挑起俄乌间的冲突，去削弱俄罗斯，从另一条战线上让俄罗斯疲于应对。
+		</p>
+	</body>
+	<script type="text/javascript">
+		var myinput=document.getElementById("myinput");
+		var mybtn=document.getElementById("mybtn")
+		var myp=document.getElementById("myp");
+		mybtn.onclick=function(){
+			var v=myinput.value;
+			myp.innerHTML=myp.innerText;
+			if(v){
+				var reg=new RegExp(v,'g');
+				var newV="<span style='background:yellow'>"+v+"</span>"
+				myp.innerHTML=myp.innerHTML.replace(reg,newV);
+			}
+		}
+	</script>
+</html>

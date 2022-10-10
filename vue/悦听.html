@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <h1>音乐播放器</h1>
+        <div id="name">
+            
+            <input type="text" autocomplete="off" v-model="query"
+            @keyup.enter="searchmusic">
+            <button type="button" @click="searchmusic"style="color: #ADD8E6;height:20px;">搜索</button>
+            <li v-for="item in musiclist">
+
+                <b>{{item.name}}</b>
+                <!--<span v-if="item.mvid!=0" @click="playmv">-->
+                <span v-if="item.mvid!=0" @click="playmv(item.mvid)">    <button type="button" style="color: #FF0000;height:20px;">MV</button></span>
+                    <button @click="playmusic(item.id)" style="color: #ADD8E6;height:20px;">播放</button>    
+            </li>
+        <video :src="mvurl" controls="controls"></video>
+            <img :src="musicpic" class="cover autoRotate">
+<audio ref='audio' :src="musicurl" controls autoplay loop class="myauto"></audio>    
+<dl v-for="item in hotComments">
+                <dt><img :src="item.user.avatarUrl"></dt>
+                <dd class="name">{{item.nick}}</dd>
+                <dd>{{item.content}}</dd>
+            </dl>
+        </div>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <!--官网提供的axios在线地址-->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <!--开发环境版本中，包含了有帮助的命令行警告-->
+        <script>
+        var name = new Vue({
+            el:"#name",
+            data:{
+                //查询关键字
+                query:'',
+                //歌曲数组
+                musiclist:[],
+                //歌曲地址
+                musicurl:"",
+                //歌曲图片
+                musicpic:"",
+                //歌曲评论
+                hotComments:[],
+                //mv地址
+                mvurl:'', 
+            },
+            methods:{
+                searchmusic:function(){
+                    var that = this; /*输入的数据赋值给that*/
+                    /*get的请求方法获取歌曲数组*/
+                    axios.get("https://autumnfish.cn/search?keywords="+this.query)
+                    .then(function(response){
+                        that.musiclist=response.data.result.songs;/*抓取数据并传送给musiclist*/
+                            console.log(response.data.result.songs);
+                    },
+                    function(err){})
+                },
+            playmusic:function(musicid){
+                var that =this;
+                //console.log(musicid);
+                /*get的请求方法抓取网站的歌曲id*/
+                axios.get("https://autumnfish.cn/song/url?id="+musicid)
+                .then(function(response){
+                    //console.log( response.data.data[0].url);
+                    that.musicurl = response.data.data[0].url;
+                },function(err){})
+                //歌曲详情的图片获取
+                axios.get("https://autumnfish.cn/song/detail?ids="+musicid)
+                .then(function(response){
+                    //console.log(response.data.songs[0].al.picUrl);
+                    that.musicpic=response.data.songs[0].al.picUrl;
+                },function(err){})
+                //歌曲评论
+                axios.get("https://autumnfish.cn/comment/hot?type=0&id="+musicid)
+                .then(function(response){
+                    that.hotComments = response.data.hotComments;
+                },function(err){})
+                                },
+                playmv:function(mvid){
+                    var that = this;
+                    axios.get("https://autumnfish.cn/mv/url?id="+mvid)
+                    .then(function(response){
+                        //console.log(response)
+                        console.log(response.data.data.url);
+                        that.mvurl=response.data.data.url;
+                    },function(err){})
+                }
+            },
+        })
+        </script>
+    </body>
+</html>

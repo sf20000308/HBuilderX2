@@ -1,0 +1,27 @@
+//最外层的包裹元素
+#wrapper{
+	//
+	#header{
+		
+		.headTop{
+			background: #eaeaea;
+			height: 30px;
+			//版心元素
+			.headTopMain{
+				//
+				width: 300px;
+				//
+				.left{
+					h5{}
+					p{
+						a{
+							&:first-child{
+								border-right: 1px solid #b3b3b3;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

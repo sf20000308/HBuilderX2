@@ -1,0 +1,594 @@
+<<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>胖娃杂货铺</title>
+		<style>
+			* {
+				margin: 0px;
+				padding: 0px;
+			}
+
+			.a {
+				position: fixed;
+				top: 0px;
+				background-color: #FFFFFF;
+				width: 100%;
+				height: 103px;
+				border: 4px solid #FF0000;
+				
+				
+			}
+			.wbk{
+				position: relative;
+				left: 130px;
+				top: 100px;
+				width: 1200px;
+				z-index: -1;
+			}
+			.c img{
+				margin-top: 10px;
+				height: 203px;
+			}
+			.c {
+				
+				margin-top: 20px;
+				width:215px;
+				height: 360px;
+				margin-left: 11px;
+				float: left;
+				border: 1px silver solid;
+				background-color: aqua;
+				border: #FF8C00;
+				text-align: center;
+			}
+			p{
+				padding: 0 10px;
+				height: 40px;
+				line-height: 40px;
+			}
+			/* .c {
+				width: 100%;
+				height: 1070px;
+				background-color: lawngreen;
+				border: #FF8C00;
+			}
+
+			.d {
+				width: 100%;
+				height: 1070px;
+				background-color: floralwhite;
+				border: #FF8C00;
+			}
+ */
+			.a .head {
+				width: 1080px;
+				height: 107px;
+				margin: 0 auto;
+				position: relative;
+			}
+
+			.z {
+				width: 258px;
+				height: 80px;
+			}
+
+			.a .head ul {
+				list-style: none;
+				right:100px;
+				height:20px;
+				line-height:20px;
+				line-height:15px;
+				top: 40%;
+				margin-top: -10px;
+				position: absolute;
+				
+			}
+
+			.a .head ul li {
+				float: left;
+				border-right: 1px solid #000000;
+				position: relative;
+				left: -100px;
+			}
+
+			.a .head ul li a {
+				text-decoration: none;
+			}
+
+			.a .head ul li span {
+				font-size: 35px;
+				margin: 0 10px;
+				
+			}
+
+			.a .head ul li:first-child span {
+				margin-left: 0;
+				color: #FC475D;
+				font-weight: 600;
+			}
+
+			.a .head ul li:last-child {
+				border: none;
+			}
+
+			.a .head ul li:last-child span {
+				margin-right: 0;
+			}
+
+			.ewm {
+				width: 200px;
+				height: 360px;
+				background-color: #FF8C00;
+				position: fixed;
+				bottom: 150px;
+				left: -100px;
+			}
+
+			.ewm:hover {
+				left: 0;
+			}
+
+			.ewm .a1 {
+				margin: 8px;
+				border: 2px solid #FFEDF1;
+				padding: 20px 15px 8px;
+			}
+
+			.ewm .a1 img {
+				width: 100%;
+				height: 70%;
+			}
+
+			.ewm .a1 .1b {
+				color: #66666;
+				margin-top: 10px;
+				font-size: 14px;
+				text-align: center;
+			}
+			#mydiv{
+				width: 100px;
+				height: 100px;
+				border: 2px solid #7CFC00;
+				border-radius: 50%;
+				position: fixed;
+				right: 10px;
+				bottom: 10px;
+				text-align: center;
+				line-height: 80px;
+				display: none;
+			}
+			.box1{
+				width: 400px;
+				height: 400px auto;
+				position: fixed;
+				left: 10px;
+				bottom: 80px;
+				left: -180px;
+			}
+			.box1:hover{
+				left: 0;
+			}
+			.box1 ul{
+				list-style: none;
+			}
+			.box1 ul li{
+				float:left;
+				width:60px;
+				height:50px;
+				line-height:50px;
+				position: relative;
+			}
+			.box1 ul li span{
+				display: block;
+				height: 50px;
+				width: 50px;
+				position: absolute;
+			}
+			.box1 ul li .star0{
+				background: url(../img/9999.png);
+			}
+			.box1 ul li .star1{
+				background: url(../img/000.png);
+			}
+			.denglu{
+				position: relative;
+				left:1200px ;
+				text-decoration: none;
+				font-size: 20px;
+			}
+			.nav{
+				position: relative;
+				display: inline-block;
+			}
+			.xiala{
+				margin-top: 15px;
+				padding-left: 20px;
+				display: none;
+				position: absolute;
+				 background-color: #f9f9f9;
+				  width: 900px;
+				  height: 450px;
+				  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+				   z-index: 1;
+			}
+			.xiala a{
+				float: left;
+				 color: black;
+				  padding: 15px 16px;
+				  text-decoration: none;
+				display: block;
+				font-size: 25px;
+				margin: 0px;
+				margin-bottom: 0px;
+				/* border-style:solid;
+				border-width:1px;
+				border-top: #E66465;
+				border-right: #E66465;
+				border-left: #E66465; */
+			}
+			.xiala2 a{
+				font-size: 35px;
+				/* padding: 10px 10px  20px 20px ; */
+				padding-bottom: 0px;
+				margin-bottom: 0px;
+				 padding-right: 50px; 
+				height: 50px;
+			}
+			.xiala a:hover {
+				background-color: gold;
+				}
+
+			.nav:hover .xiala{
+				display: block;
+			}
+			.shu1{
+				margin: 0px;
+				padding: 0px;
+				float: left;
+				width:180px;
+				margin-top: 0px;
+				padding-top: 0px;
+				
+				border-style:solid;
+				border-width:1px;
+			}
+			.shu1 a:hover {
+				margin: 5px;
+			}
+			.shu2{
+				float: left;
+				margin: 0px;
+				padding: 0px;
+				width:200px;
+				margin-left: 20px;
+				margin-right: 50px;
+				border-style:solid;
+				border-width:1px;
+			}
+			.shu2 a:hover {
+				margin: 5px;
+			}
+			.shu3{
+				float: left;
+				margin: 0px;
+				margin-right: 50px;
+				padding: 0px;
+				width:200px;
+				border-style:solid;
+				border-width:1px;
+				
+			}
+			.shu3 a:hover {
+				margin: 5px;
+			}
+			.shu4{
+				float: left;
+				margin: 0px;
+				padding: 0px;
+				width:150px;
+				border-style:solid;
+				border-width:1px;
+			}
+			.shu4 a:hover {
+				margin: 5px;
+			}
+			.shu5{
+				margin: 0px;
+				padding: 0px;
+				float: left;
+				width:150px;
+				margin-right: 50px;
+				border-style:solid;
+				border-width:1px;
+		
+			}
+			.shu5 a:hover {
+				margin: 5px;
+			}
+			.shu6{
+				float: left;
+				margin: 0px;
+				padding: 0px;
+				width:200px;
+				margin-right: 50px;
+				border-style:solid;
+				border-width:1px;
+				border-style:solid;
+				border-width:1px;
+			}
+			.shu6 a:hover {
+				margin: 5px;
+			}
+			.shu7{
+				float: left;
+				margin: 0px;
+				padding: 0px;
+				width:200px;
+				border-style:solid;
+				border-width:1px;
+			}
+			.shu7 a:hover {
+				margin: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="a">
+			<div class="head">
+				<a href="index.html" class="denglu">登录</a>
+				<a href="" class="denglu">注册</a>
+				<a href="#">
+					<img ="../img/1.png">
+				</a>
+				<ul>
+					<li>
+						<a href="#">
+							<span>首页</span>
+						</a>
+					</li>
+					<li class="nav">
+						<a href="男子专区.html" class="men">
+							<span>男子</span>
+						</a>
+						<div class="xiala">
+							<div class="xiala2"><a href="" >所有鞋类</a></div>
+							<div class="xiala2"><a href="" >所有服装类</a></div>
+							<div class="xiala2"><a href="" >所有配件类</a></div>
+							<div class="xiala2"><a href="" >运动项目</a></div>
+							<div class="shu1">
+							<a href="">户外综训鞋</a>
+							<a href="">运动鞋</a>
+							<a href="">跑鞋</a>
+							<a href="">篮球鞋</a>
+							<a href="">休闲鞋</a>
+							<a href="">板鞋</a>
+							</div>
+							<div class="shu2">
+								<a href="">套头卫衣</a>
+								<a href="">外套夹克</a>
+								<a href="">短袖T恤</a>
+								<a href="">长裤</a>
+								<a href="">羽绒服/马甲</a>
+								<a href="">运动短裤</a>
+							</div>
+							<div class="shu3">
+								<a href="">包类</a>
+								<a href="">运动袜子</a>
+							</div>
+							<div class="shu4">
+								<a href="">跑步</a>
+								<a href="">篮球</a>
+								<a href="">综训</a>
+								<a href="">生活</a>
+								<a href="">健身</a>
+							</div>
+						</div>
+					</li>
+					<li class="nav">
+						<a href="女子专区.html" class="nv">
+							<span>女子</span>
+						</a>
+					<div class="xiala">
+						<div class="xiala2"><a href="" >所有鞋类</a></div>
+						<div class="xiala2"><a href="" >所有服装类</a></div>
+						<div class="xiala2"><a href="" >所有配件类</a></div>
+						<div class="xiala2"><a href="" >    </a></div>
+						<div class="shu5">
+							<a href="">跑鞋</a>
+							<a href="">休闲鞋</a>
+							<a href="">板鞋</a>
+							<a href="">棉鞋</a>
+						</div>
+						<div class="shu6">
+							<a href="">羽绒服</a>
+							<a href="">套头卫衣</a>
+							<a href="">外套/夹克</a>
+							<a href="">长裤</a>
+							<a href="">短袖T恤</a>
+							<a href="">运动短裤</a>
+						</div>
+						<div class="shu7">
+							<a href="">包类</a>
+							<a href="">运动袜类</a>
+						</div>
+					</li>
+					<li>
+						<a href="#">
+							<span>安踏儿童</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span>品牌文化</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span>观赏视频</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span>联系我们</span>
+						</a>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+		<div class="wbk">
+		<div class="c">
+			<img src="../img/img1.png" alt="">
+			<p>【冠军系列】安踏男子力简休闲鞋</p>
+			<br>
+			<p>
+				<span class="price">¥599.00</span>
+				<span class="c_sport">运动</span>
+			</p>
+		</div>
+		<div class="c">
+			<img src="../img/img2.png" >
+			<p>【冠军系列】安踏冬奥领奖鞋系列冠军荣耀女跑鞋</p>
+			<br>
+			<p>
+				<span class="price">¥799.00</span>
+				<span class="e_sport">运动</span>
+			</p>
+		</div>
+		
+		<div class="c">
+			<img src="../img/img4.png" alt="">
+			<p>【冠军系列】安踏2022年北京冬奥会国旗款女短袖</p>
+			<br>
+			<p>
+				<span class="price">¥399.00</span>
+				<span class="c_sport">运动</span>
+			</p>
+		</div>
+		<div class="c">
+			<img src="../img/img3.png" alt="">
+			<p>【冠军系列】高端训练女子健身梭织运动上衣</p>
+			<br>
+			<p>
+				<span class="price">¥1499.00</span>
+				<span class="c_sport">运动</span>
+			</p>
+		</div>
+		<div class="c">
+			<img src="../img/img5.png" alt="">
+			<p>【冠军系列】安踏男子国旗款短袖针织T恤衫</p>
+			<br>
+			<p>
+				<span class="price">¥399.00</span>
+				<span class="c_sport">运动</span>
+			</p>
+		</div>
+		<div class="c">
+			<img src="../img/img6.png" alt="">
+			<p>【冠军系列】谷爱凌同款安踏冠军健身训练系列</p>
+			<br>
+			<p>
+				<span class="price">¥699.00</span>
+				<span class="c_sport">运动</span>
+			</p>
+		</div>
+		<div class="c">
+			<img src="../img/img7.png" alt="">
+			<p>【冠军系列】安踏星标系列实战高帮实战篮球鞋</p>
+			<br>
+			<p>
+				<span class="price">¥599.00</span>
+				<span class="c_sport">运动</span>
+			</p>
+		</div>
+		<div class="c">
+			<img src="../img/img8.png" alt="">
+			<p>【冠军系列】安踏星标系列星程2022春夏新款男鞋女鞋潮流情侣休闲鞋</p>
+			<br>
+			<p>
+				<span class="price">¥799.00</span>
+				<span class="c_sport">运动</span>
+			</p>	
+		</div>
+		<div class="c">
+			<img src="../img/img9.png" alt="">
+			<p>【冠军系列】安踏冠军新标系列男子休闲卫衣套头衫</p>
+			<br>
+			<p>
+				<span class="price">¥249.00</span>
+				<span class="c_sport">运动</span>
+			</p>
+		</div>
+		<div class="c">
+			<img src="../img/img10.png" alt="">
+			<p>【冠军系列】安踏女鞋运动鞋2022夏季新款官网旗舰休闲薄网面透气跳绳跑步鞋子</p>
+			<br>
+			<p>
+				<span class="price">¥298.00</span>
+				<span class="c_sport">运动</span>
+			</p>
+		</div>
+		</div>
+		<div class="b">
+			<div class="box1">
+				<ul>
+				<li>
+					<span class="star1"></span>
+					<span class="star0"></span>
+				</li>
+				<li>
+					<span class="star1"></span>
+					<span class="star0"></span>
+				</li>
+				<li>
+					<span class="star1"></span>
+					<span class="star0"></span>
+				</li>
+				<li>
+					<span class="star1"></span>
+					<span class="star0"></span>
+				</li>
+				<li>
+					<span class="star1"></span>
+					<span class="star0"></span>
+				</li>
+				<li class="text">非常好</li>
+			</ul>
+			</div>
+		</div>
+		<div class="ewm">
+			<div class="a1">
+				<img src="../img/1.png" alt="">
+				<div class="b2">
+					<div>QQ扫码加好友</div>
+					<div>嘻！嘻！</div>
+				</div>
+			</div>
+		</div>
+		<div id="mydiv" onclick="abc" >返回顶部</div>
+	</body>
+</html>
+<script type="text/javascript" src="https://cdn.staticfile.org/jquery/2.0.0/jquery.min.js" charset="utf-8"></script>
+<script type="text/javascript">
+	var mydiv =document.getElementById("mydiv");
+			mydiv.onclick = function  abc(){
+		document.documentElement.scrollTop=0;
+		}
+		window.onscroll=function(){
+			if(document.documentElement.scrollTop>200){
+				mydiv.style.display="block"
+			}
+			else
+			{
+				mydiv.style.display="none"
+			}
+		}
+		$(".box1 ul li").hover(function(){
+			var txt =['非常差','差','一般','好','非常好'];
+			$(this).find(".star0").css("display","none");
+			$(this).prevAll().find(".star0").css("display","none");
+			$(this).nextAll().find(".star0").css("display","block");
+			$(".box1 ul .text").html(txt[$(this).index()]);
+		})
+</script>
